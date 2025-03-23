@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقعي الشخصي</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth; /* Sayfanın yumuşak kaymasını sağlar */
+        }
+
+        /* Navbar */
+        .bas {
+            height: 60px;
+            width: 100%;
+            display: flex;
+            position: fixed;
+            top: 0;
+            background-color: rgb(95, 9, 56);
+            color: aliceblue;
+            justify-content: flex-end;
+            align-items: center;
+            padding-right: 20px;
+            z-index: 1000;
+        }
+
+        .menu-btn {
+            display: none;
+        }
+
+        .bas ul {
+            list-style: none;
+            display: flex;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .bas ul li a {
+            color: aliceblue;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .bas ul li a:hover {
+            color: black;
+        }
+
+        /* Arka Plan Resmi */
+        #background-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        #background-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Karartma efekti */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(67, 41, 16, 0.8);
+        }
+
+        /* İçerik */
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-align: center;
+            font-size: 24px;
+            z-index: 2;
+        }
+
+        /* Hakkımda Bölümü */
+        #hak {  
+            margin: 50px auto; /* Navbar'dan dolayı biraz aşağı insin */
+            padding: 20px;
+            width: 90%;
+            height: auto;
+            background-color: rgba(165, 126, 94, 0.1);
+            line-height: 40px;
+        }
+        #ilet{
+            line-height: 40px;
+
+            margin: 50px auto; /* Navbar'dan dolayı biraz aşağı insin */
+            padding: 20px;
+            width: 90%;
+            height: auto;
+            background-color: rgba(165, 126, 94, 0.05);
+display: block;
+
+
+        }
+        #proje{   
+              line-height: 40px;
+
+margin: 50px auto; /* Navbar'dan dolayı biraz aşağı insin */
+padding: 20px;
+width: 90%;
+height: auto;
+background-color: rgba(165, 126, 94, 0.05);
+display: block;
+
+
+        }
+
+        #yetenek{
+            line-height: 40px;
+
+margin: 50px auto; /* Navbar'dan dolayı biraz aşağı insin */
+padding: 20px;
+width: 90%;
+height: auto;
+background-color: rgba(165, 126, 94, 0.05);
+display: block;
+        }
+        #ilet ul li a{
+
+            text-decoration: none;
+        }
+    #ilet ul li a:hover{
+        color: black;
+    }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="bas">
+    <div class="menu-btn" id="menu-btn" onclick="toggleMenu()">☰</div> 
+    <ul id="menu">
+        <li><a href="#background-container">Home</a></li>
+        <li><a href="#yetenek">Yetenekler</a></li>
+        <li><a href="#proje">Projeler</a></li>
+        <li><a href="#hak">Hakkımda</a></li>  <!-- BURAYA DÜZENLEME YAPILDI -->
+        <li><a href="#ilet">İletişim</a></li>
+    </ul>
+</div>
+
+
+<!-- Arka Plan + Karartma -->
+<div id="background-container">
+    <img src="tt.jpg" alt="foto">
+    <div class="overlay"></div>
+    <div class="content">
+        <h1>Hoş Geldiniz!</h1
+        <p>Kişisel web siteme göz atın.</p>
+    </div>
+</div>
+
+<!-- Hakkımda Bölümü -->
+<div id="hak">
+    <br> <!-- BURASI class yerine id olarak değiştirildi -->
+    <h1>Hakkımda</h1>
+    <br>
+    <p>
+        Merhaba! Ben İman, bilgisayar mühendisi ve yazılım geliştiricisiyim. Yazılım dünyasına olan ilgim, problem çözme ve teknolojiye olan merakımla başladı. Özellikle gömülü sistemler, kontrol sistemleri ve su altı araçları üzerine çalışmalar yapıyorum.
+    </p>
+    <p>
+        Şu anda Teknofest kapsamında su altı araçlarının yazılım ve kontrol sistemleri üzerine çalışıyorum. Python, C# ve web geliştirme konularında deneyimliyim ve sürekli kendimi geliştirmeye odaklanıyorum.
+    </p>
+    <p>
+        Ayrıca, kişisel projeler ve açık kaynak geliştirme ile yeni teknolojileri öğrenmeye ve uygulamaya çalışıyorum. Hedefim, yazılım ve teknolojiyle gerçek dünya problemlerine yenilikçi çözümler üretmek.
+    </p>
+    <p>
+        Bana ulaşmak veya projelerimi incelemek için <a href="https://wa.me/905316487555">tıklayınız</a> üzerinden iletişime geçebilirsiniz!
+    </p><br>
+</div>
+<div id="yetenek">
+    <h1>Yetenekler</h1>
+<br>
+<ul>
+    <li><strong>Programlama Dilleri:</strong> C# (güçlü temel), Python, HTML, CSS, JavaScript (başlangıç seviyesinde).</li>
+    <li><strong>Web Geliştirme:</strong> HTML ve CSS ile görsel uyumlu sayfalar oluşturma, Django ve Flask öğrenme sürecinde olma.</li>
+    <li><strong>Veri Yapıları & Algoritmalar:</strong> C# ile derinlemesine bilgi ve uygulama deneyimi.</li>
+    <li><strong>Gömülü Sistemler:</strong> Raspberry Pi ile Python ve OpenCV kullanarak görüntü işleme projeleri.</li>
+    <li><strong>Siber Güvenlik:</strong> Profesyonel düzeyde uzmanlaşma hedefi.</li>
+    <li><strong>Yapay Zeka & Makine Öğrenimi:</strong> Uzman seviyeye ulaşma hedefi.</li>
+    <li><strong>Elektrik & Devre Tasarımı:</strong> Üniversite laboratuvarında teorik ve pratik çalışmalar.</li>
+    <li><strong>Analitik Düşünme & Problem Çözme:</strong> Karmaşık sorunlara yaratıcı ve etkili çözümler üretme.</li>
+    <li><strong>UI/UX & Tasarım:</strong> Kullanıcı dostu arayüzler ve estetik web tasarımları oluşturma.</li>
+</ul>
+<br>
+
+</div>
+<div id="proje">
+
+    <h1>Projeler</h1>
+<br>
+
+<h2>🔹 Teknofest Su Altı Sistemi</h2>
+<p>
+    Teknofest kapsamında geliştirdiğimiz bu proje, su altı araçlarının yazılım ve kontrol sistemlerine odaklanmaktadır. 
+    Araçlarımızın otonom hareket kabiliyetini artırmak, sensör verilerini analiz etmek ve optimize edilmiş kontrol algoritmaları 
+    geliştirmek üzerine çalışmalar yapıyoruz. Gömülü sistemler, görüntü işleme ve yapay zeka tekniklerini entegre ederek, 
+    su altı keşif ve araştırma çalışmalarında kullanılabilecek bir sistem geliştiriyoruz.
+</p>
+
+<h2>🔹 Diş Doktoru Randevu Web Sayfası</h2>
+<p>
+   ggg  Bu proje, diş doktorları ve hastalar için kullanıcı dostu bir randevu yönetim sistemi sağlamayı amaçlamaktadır. 
+    HTML, CSS ve JavaScript kullanarak oluşturduğum web sitesi, hastaların uygun saatleri kolayca görüntüleyip randevu almasına olanak tanımaktadır. 
+    Aynı zamanda, doktorların randevularını yönetebileceği bir panel içerir. Sistemin gelecekte Django veya Flask ile geliştirilerek 
+    daha dinamik hale getirilmesi planlanmaktadır.
+</p>
+<br>
+
+</div>
+<div id="ilet">
+    <strong><h1>İletişim</h1></strong
+    <ul >
+        <li><a href="https://wa.me/905316487555" target="_blank">WhatsApp</a></li>
+        <li><a href="tel:+905316487555">Telefonla Ara</a></li>
+        <li><a href="mailto:iman.herbli@gmail.com">E-posta Gönder</a></li>
+    </ul>
+    
+</div>ß
+</body>
+</html>
